@@ -19,11 +19,12 @@ def main(page: ft.Page):
             content=ft.Container(
                 content=ft.Row(
                     controls=[
-                        ft.IconButton(icon=ft.Icons.REMOVE, on_click=decrement_click),
+                        ft.IconButton(icon=ft.Icons.REMOVE, on_click=decrement_click, icon_size=40),
                         counter,
-                        ft.IconButton(icon=ft.Icons.ADD, on_click=increment_click),
+                        ft१९.IconButton(icon=ft.Icons.ADD, on_click=increment_click, icon_size=40),
                     ],
                     alignment=ft.MainAxisAlignment.CENTER,
+                    spacing=30,
                 ),
                 alignment=ft.Alignment.CENTER,
             ),

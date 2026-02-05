@@ -13,19 +13,18 @@ def main(page: ft.Page):
         counter.value = str(counter.data)    
 
 
-    page.floating_action_button = ft.FloatingActionButton(
-        icon=ft.Icons.ADD, on_click=increment_click
-    )
-    page.floating_action_button_2 = ft.FloatingActionButton(
-        icon=ft.Icons.HOME, on_click=decrement_click
-    )
-        
-
     page.add(
         ft.SafeArea(
             expand=True,
             content=ft.Container(
-                content=counter,
+                content=ft.Row(
+                    controls=[
+                        ft.IconButton(icon=ft.Icons.REMOVE, on_click=decrement_click),
+                        counter,
+                        ft.IconButton(icon=ft.Icons.ADD, on_click=increment_click),
+                    ],
+                    alignment=ft.MainAxisAlignment.CENTER,
+                ),
                 alignment=ft.Alignment.CENTER,
             ),
         )

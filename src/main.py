@@ -21,7 +21,7 @@ def main(page: ft.Page):
                     controls=[
                         ft.IconButton(icon=ft.Icons.REMOVE, on_click=decrement_click, icon_size=40),
                         counter,
-                        ft१९.IconButton(icon=ft.Icons.ADD, on_click=increment_click, icon_size=40),
+                        ft.IconButton(icon=ft.Icons.ADD, on_click=increment_click, icon_size=40),
                     ],
                     alignment=ft.MainAxisAlignment.CENTER,
                     spacing=30,
